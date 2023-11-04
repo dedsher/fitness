@@ -1,0 +1,136 @@
+.price {
+  padding: 120px 0;
+  color: $color-sapphire;
+  background-color: $color-ghost-white;
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    gap: 40px;
+  }
+
+  li {
+    padding: 65px 70px;
+    background-color: $color-default-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 448px;
+    border: 7px solid $color-transparent;
+  }
+
+  .price__card-accent {
+    border: 7px solid;
+    border-image-slice: 1;
+    border-image-source: $red-to-blue-to-bottom-right;
+  }
+
+  h3 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 26px;
+    margin: 0 0 11px 0;
+  }
+
+  p {
+    margin: 0 0 66px 0;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+
+  b {
+    color: $color-egyptian-blue;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 150%;
+    margin: 0 0 35px 0;
+  }
+
+  span {
+    font-family: $ff-rouble;
+  }
+
+  a {
+    padding: 27px 42px;
+  }
+}
+
+.price__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price__title {
+  font-family: $ff-alumni;
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 54px;
+  letter-spacing: 1.62px;
+  margin: 0 0 38px 0;
+}
+
+.price__tabs {
+  display: flex;
+  gap: 50px;
+  position: relative;
+  margin: 0 0 51px 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    bottom: -14px;
+    background-color: rgba($color-grey, 0.2);
+    z-index: 1;
+  }
+
+  .is-active {
+    color: $color-sapphire;
+
+    &::after {
+      content: "";
+    }
+  }
+}
+
+.price__tab {
+  position: relative;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  cursor: pointer;
+  color: rgba($color-sapphire, 0.5);
+  border: none;
+  background-color: unset;
+
+  &::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -14px;
+    height: 2px;
+    background-color: $color-crimson;
+    z-index: 2;
+  }
+
+  @include hover-focus {
+    color: $color-sapphire;
+
+    &::after {
+      content: "";
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+
+    pointer-events: none;
+  }
+}

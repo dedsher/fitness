@@ -1,0 +1,35 @@
+.header {
+  padding: 30px 0;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h2 {
+    margin: 0;
+
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 26px;
+    color: $color-default-white;
+    text-transform: uppercase;
+
+    @include vp-1365 {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+
+  a {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 26px;
+    color: $color-default-white;
+
+    @include vp-1365 {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.reviews {
+  padding: 120px 0;
+
+  h2 {
+    font-size: 54px;
+    font-weight: 600;
+    line-height: 54px;
+    letter-spacing: 1.62px;
+    font-family: $ff-alumni;
+    text-align: center;
+    color: $color-sapphire;
+    margin: 0 0 46px 0;
+  }
+}
+
+.reviews__wrapper {
+}
+
+.reviews__card {
+  color: $color-default-white;
+  background-color: $color-resolution-blue;
+  display: flex;
+  gap: 30px;
+  width: 560px;
+  padding: 60px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 40px 0px rgba($color-resolution-blue, 0.20);
+
+  h3 {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 0 0 21px 0;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    margin: 0;
+  }
+}
+
+.reviews__img-wrapper {
+  min-width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.reviews__text {
+
+}
