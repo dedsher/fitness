@@ -2,6 +2,10 @@
   color: $color-sapphire;
   padding: 120px 0;
 
+  @include vp-1365 {
+    padding: 100px 0 183px;
+  }
+
   h2 {
     font-size: 54px;
     font-weight: 600;
@@ -9,6 +13,12 @@
     letter-spacing: 1.62px;
     font-family: $ff-alumni;
     margin: 0 0 25px 0;
+
+    @include vp-1365 {
+      margin: 0 0 20px 0;
+      font-size: 42px;
+      letter-spacing: 1.26px;
+    }
   }
 
   h3 {
@@ -16,6 +26,12 @@
     font-weight: 400;
     line-height: 22px;
     margin: 0 0 95px 0;
+
+    @include vp-1365 {
+      font-size: 20px;
+      line-height: 20px;
+      margin: 0 0 36px 0;
+    }
   }
 
   p {
@@ -27,6 +43,10 @@
 
   p + p {
     margin-top: 5px;
+
+    @include vp-1365 {
+      display: none;
+    }
   }
 
   &__wrapper {
@@ -34,20 +54,56 @@
     gap: 145px;
     width: fit-content;
     margin: 0 auto;
+
+    @include vp-1365 {
+      flex-direction: column;
+      gap: 36px;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+    }
   }
 
   &__content-wrapper {
     max-width: 355px;
+
+    @include vp-1365 {
+      max-width: 502px;
+    }
   }
 
   &__img-wrapper {
     max-width: 660px;
     position: relative;
+
+    img {
+      border: none;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+
+    @include vp-1365 {
+      width: 100%;
+      height: 345px;
+      max-width: unset;
+    }
   }
 
   &__video-wrapper {
     position: absolute;
     bottom: -115px;
     left: -63px;
+
+    @include vp-1365 {
+      left: 50%;
+      bottom: -83px;
+      transform: translateX(-50%);
+
+      iframe {
+        width: 265px;
+        height: 167px;
+      }
+    }
   }
 }

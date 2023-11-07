@@ -2,6 +2,7 @@
   padding: 120px 0;
   color: $color-sapphire;
   background-color: $color-ghost-white;
+  position: relative;
 
   ul {
     display: grid;
@@ -10,6 +11,10 @@
     padding: 0;
     margin: 0;
     gap: 40px;
+
+    @include vp-1365 {
+      grid-template-columns: 1fr;
+    }
   }
 
   li {
@@ -20,6 +25,11 @@
     align-items: center;
     min-height: 448px;
     border: 7px solid $color-transparent;
+
+    @include vp-1365 {
+      padding: 65px 118px;
+      // min-width: 440px;
+    }
   }
 
   .price__card-accent {
@@ -33,6 +43,12 @@
     font-weight: 700;
     line-height: 26px;
     margin: 0 0 11px 0;
+
+    @include vp-1365 {
+      font-size: 24px;
+      line-height: 24px;
+      margin: 0 0 18px 0;
+    }
   }
 
   p {
@@ -40,23 +56,41 @@
     font-size: 16px;
     font-weight: 300;
     line-height: 24px;
+
+    @include vp-1365 {
+      margin: 0 0 72px 0;
+    }
   }
 
   b {
     color: $color-egyptian-blue;
     font-size: 60px;
     font-weight: 700;
-    line-height: 150%;
+    line-height: 90px;
     margin: 0 0 35px 0;
+
+    @include vp-1365 {
+      margin: 0 0 24px 0;
+    }
   }
 
   span {
     font-family: $ff-rouble;
+    color: $color-sapphire;
   }
 
   a {
-    padding: 27px 42px;
+    @include vp-1365 {
+      padding: 20px 42px;
+    }
   }
+
+  // &::after {
+  //   content: "";
+  //   width: 321px;
+  //   height: 384px;
+  //   ТУТ ДОЛЖНЫ БЫТЬ БЛИНЫ
+  // }
 }
 
 .price__wrapper {
@@ -72,13 +106,19 @@
   line-height: 54px;
   letter-spacing: 1.62px;
   margin: 0 0 38px 0;
+
+  @include vp-1365 {
+    font-size: 42px;
+    line-height: 42px;
+    letter-spacing: 1.26px;
+  }
 }
 
 .price__tabs {
   display: flex;
   gap: 50px;
   position: relative;
-  margin: 0 0 51px 0;
+  margin: 0 0 37px 0;
 
   &::after {
     content: "";
@@ -86,9 +126,13 @@
     left: 0;
     right: 0;
     height: 2px;
-    bottom: -14px;
+    bottom: 0;
     background-color: rgba($color-grey, 0.2);
     z-index: 1;
+  }
+
+  @include vp-1365 {
+    margin: 0 0 45px 0;
   }
 
   .is-active {
@@ -109,15 +153,21 @@
   color: rgba($color-sapphire, 0.5);
   border: none;
   background-color: unset;
+  padding: 5px 0 14px;
 
   &::after {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -14px;
+    bottom: 0;
     height: 2px;
     background-color: $color-crimson;
     z-index: 2;
+  }
+
+  @include vp-1365 {
+    font-size: 18px;
+    line-height: 18px;
   }
 
   @include hover-focus {

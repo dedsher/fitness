@@ -6,6 +6,10 @@
   .btn {
     justify-self: end;
   }
+
+  @include vp-1365 {
+    padding: 0 0 100px 0;
+  }
 }
 
 .hero__wrapper {
@@ -16,6 +20,12 @@
 
   gap: 70px;
   grid-template-columns: 385px 706px;
+
+  @include vp-1365 {
+    grid-template-columns: 1fr 1fr;
+    min-width: unset;
+    gap: 30px;
+  }
 }
 
 .hero__info {
@@ -23,6 +33,11 @@
   width: 100%;
   max-width: 385px;
   padding: 62px 0;
+
+  @include vp-1365 {
+    padding: 31px 0;
+    gap: 26px;
+  }
 }
 
 .hero__info-wrapper {
@@ -31,6 +46,10 @@
   justify-content: start;
 
   text-align: right;
+
+  @include vp-1365 {
+    max-width: 185px;
+  }
 }
 
 .hero__city {
@@ -43,6 +62,12 @@
   text-align: right;
   text-transform: uppercase;
   letter-spacing: 1.62px;
+
+  @include vp-1365 {
+    font-size: 42px;
+    line-height: 42px;
+    letter-spacing: 1.26px;
+  }
 }
 
 .hero__about {
@@ -70,6 +95,13 @@
   font-family: $ff-alumni;
   text-transform: uppercase;
   letter-spacing: 4.6px;
+
+  @include vp-1365 {
+    font-size: 72px;
+    line-height: 85px;
+    letter-spacing: unset;
+    margin: 0 0 50px 0;
+  }
 }
 
 .hero__btn {
@@ -79,4 +111,10 @@
 .hero__img-wrapper {
   width: 100%;
   max-width: 500px;
+
+  img {
+    border: none;
+    object-fit: cover;
+    height: 100%;
+  }
 }

@@ -9,6 +9,14 @@
   letter-spacing: 1.62px;
   font-family: $ff-alumni;
   color: $color-sapphire;
+  margin: 0 0 45px 0;
+
+  @include vp-1365 {
+    text-align: center;
+    font-size: 42px;
+    line-height: 42px;
+    margin: 0 0 40px 0;
+  }
 }
 
 .swiper-wrapper {

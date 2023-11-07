@@ -11,12 +11,17 @@
   color: $color-default-white;
   text-transform: uppercase;
   letter-spacing: 0.6px;
+  box-sizing: border-box;
 
   background-color: $color-transparent;
   border: 2px solid $color-default-white;
   cursor: pointer;
 
   transition: all $trans-default;
+
+  @include vp-1365 {
+    padding: 22px 32px;
+  }
 
   @include hover-focus {
     color: $color-egyptian-blue;
@@ -40,6 +45,8 @@
   width: fit-content;
   height: fit-content;
   padding: 27px 56px;
+  box-sizing: border-box;
+  min-height: 56px;
 
   font-weight: 700;
   font-size: 12px;
@@ -53,13 +60,17 @@
   border: 2px solid $color-sapphire;
   cursor: pointer;
 
-  transition: all $trans-default;
+  transition: background-color $trans-default;
+
+  @include vp-1365 {
+    padding: 22px 32px;
+  }
 
   @include hover-focus {
     color: $color-default-white;
 
     background: $red-to-blue-to-right;
-    border: unset;
+    border: none;
   }
 
   @include active {
