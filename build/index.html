@@ -36,8 +36,8 @@
               <div class="hero__info-wrapper">
                 <p class="hero__city">Омск</p>
                 <h1 class="hero__title">Фитнес центр</h1>
-                <button class="btn hero__btn">Купить абонемент</button>
               </div>
+              <button class="btn hero__btn">Купить абонемент</button>
             </div>
             <div class="hero__img-wrapper">
               <picture>
@@ -81,17 +81,17 @@
             </div>
             <div class="about__img-wrapper">
               <picture>
-                <!-- <source media="(min-width: 1280px)"
-                  srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x" width="1280" height="540" type="image/webp"> -->
                 <source media="(max-width: 767px)"
-                  srcset="images/about-tablet@1x.webp 1x, images/about-tablet@2x.webp 2x" width="678" height="345" type="image/webp">
+                  srcset="img/content/about-mobile@1x.webp 1x, img/content/about-mobile@2x.webp 2x" width="320" height="313" type="image/webp">
+                <source media="(max-width: 1365px)"
+                  srcset="img/content/about-tablet@1x.webp 1x, img/content/about-tablet@2x.webp 2x" width="678" height="345" type="image/webp">
                 <source
                   srcset="img/content/about@1x.webp 1x, img/content/about@2x.webp 2x" width="660" height="401" type="image/webp">
 
-                <!-- <source media="(min-width: 1280px)"
-                  srcset="images/map-desktop@1x.png 1x, images/map-desktop@2x.png 2x" width="1280" height="540" type="image/png"> -->
                 <source media="(max-width: 767px)"
-                  srcset="images/about-tablet@1x.png 1x, images/about-tablet@2x.png 2x" width="678" height="345" type="image/png">
+                  srcset="img/content/about-mobile@1x.png 1x, img/content/about-mobile@2x.png 2x" width="320" height="313" type="image/png">
+                <source media="(max-width: 1365px)"
+                  srcset="img/content/about-tablet@1x.png 1x, img/content/about-tablet@2x.png 2x" width="678" height="345" type="image/png">
                 <img src="img/content/about@1x.png"
                   srcset="img/content/about@2x.png 2x" alt="" width="660" height="401">
               </picture>
@@ -175,7 +175,7 @@
 
           <div class="jury">
             <h2 class="jury__title">Жюри</h2>
-            <div class="jury__wrapper slider">
+            <div class="jury__wrapper swiper" data-swiper="jury">
               <div class="swiper-wrapper">
                 <div class="jury__card">
                   <figure>
@@ -289,10 +289,10 @@
                   <span>Вы всегда найдете место для своей машины на нашей парковке</span>
                 </div>
               </li>
-              <div class="features__main">
+              <li class="features__main">
                 <h3><b>100</b><span>Тренажеров</span></h3>
                 <p>Современные тренажеры на все группы мышц</p>
-              </div>
+              </li>
               <li>
                 <p><b>350</b><small>мест</small></p>
                 <div class="features__info">
@@ -380,11 +380,15 @@
               <div class="reviews__card">
                 <div class="reviews__img-wrapper">
                   <picture>
+                    <source media="(max-width: 767px)"
+                      srcset="img/content/reviews@1x.webp 1x, img/content/reviews@2x.webp 2x" width="68" height="68" type="image/webp">
                     <source
-                      srcset="img/content/reviews@1x.webp 1x, img/content/reviews@2x.webp 2x" width="660" height="401" type="image/webp">
+                      srcset="img/content/reviews@1x.webp 1x, img/content/reviews@2x.webp 2x" width="80" height="80" type="image/webp">
 
+                    <source media="(max-width: 767px)"
+                      srcset="img/content/reviews@1x.png 1x, img/content/reviews@2x.png 2x" width="68" height="68" type="image/png">
                     <img src="img/content/reviews@1x.png"
-                      srcset="img/content/reviews@2x.png 2x" alt="" width="660" height="401">
+                      srcset="img/content/reviews@2x.png 2x" alt="" width="80" height="80">
                   </picture>
                 </div>
                 <div class="reviews__text">

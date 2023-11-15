@@ -1,76 +1,112 @@
 .price {
-  padding: 120px 0;
-  color: $color-sapphire;
-  background-color: $color-ghost-white;
   position: relative;
+
+  padding: 120px 0;
+
+  color: $color-sapphire;
+
+  background-color: $color-ghost-white;
+
+  @include vp-1365 {
+    padding: 100px 0;
+  }
+  @include vp-767 {
+    padding: 70px 0;
+  }
 
   ul {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    list-style-type: none;
-    padding: 0;
     margin: 0;
-    gap: 40px;
+    padding: 0;
 
+    list-style-type: none;
+
+    gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
     @include vp-1365 {
       grid-template-columns: 1fr;
     }
   }
 
   li {
-    padding: 65px 70px;
-    background-color: $color-default-white;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 448px;
+    padding: 65px 70px;
+
+    background-color: $color-default-white;
     border: 7px solid $color-transparent;
 
     @include vp-1365 {
       padding: 65px 118px;
       // min-width: 440px;
     }
+    @include vp-767 {
+      min-height: unset;
+      padding: 50px 42px;
+    }
   }
 
   .price__card-accent {
     border: 7px solid;
-    border-image-slice: 1;
     border-image-source: $red-to-blue-to-bottom-right;
+    border-image-slice: 1;
   }
 
   h3 {
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 26px;
     margin: 0 0 11px 0;
 
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 26px;
+
     @include vp-1365 {
+      margin: 0 0 18px 0;
+
       font-size: 24px;
       line-height: 24px;
-      margin: 0 0 18px 0;
+    }
+    @include vp-767 {
+      font-size: 22px;
+      line-height: 22px;
     }
   }
 
   p {
     margin: 0 0 66px 0;
-    font-size: 16px;
+
     font-weight: 300;
+    font-size: 16px;
     line-height: 24px;
 
     @include vp-1365 {
       margin: 0 0 72px 0;
     }
+    @include vp-767 {
+      margin: 0 0 62px 0;
+
+      font-size: 14px;
+      line-height: 22px;
+    }
   }
 
   b {
-    color: $color-egyptian-blue;
-    font-size: 60px;
-    font-weight: 700;
-    line-height: 90px;
     margin: 0 0 35px 0;
+
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 90px;
+    color: $color-egyptian-blue;
 
     @include vp-1365 {
       margin: 0 0 24px 0;
+    }
+    @include vp-767 {
+      margin: 0 0 22px 0;
+
+      font-size: 48px;
+      line-height: 72px;
     }
   }
 
@@ -82,6 +118,9 @@
   a {
     @include vp-1365 {
       padding: 20px 42px;
+    }
+    @include vp-767 {
+      padding: 22px 35px;
     }
   }
 
@@ -100,39 +139,51 @@
 }
 
 .price__title {
-  font-family: $ff-alumni;
-  font-size: 54px;
-  font-weight: 600;
-  line-height: 54px;
-  letter-spacing: 1.62px;
   margin: 0 0 38px 0;
+
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 54px;
+  font-family: $ff-alumni;
+  letter-spacing: 1.62px;
 
   @include vp-1365 {
     font-size: 42px;
     line-height: 42px;
     letter-spacing: 1.26px;
   }
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 0.96px;
+  }
 }
 
 .price__tabs {
-  display: flex;
-  gap: 50px;
   position: relative;
+
+  display: flex;
   margin: 0 0 37px 0;
+
+  gap: 50px;
+  @include vp-1365 {
+    margin: 0 0 45px 0;
+  }
+  @include vp-767 {
+    margin: 0 0 35px 0;
+  }
 
   &::after {
     content: "";
     position: absolute;
-    left: 0;
     right: 0;
-    height: 2px;
     bottom: 0;
-    background-color: rgba($color-grey, 0.2);
+    left: 0;
     z-index: 1;
-  }
 
-  @include vp-1365 {
-    margin: 0 0 45px 0;
+    height: 2px;
+
+    background-color: rgba($color-grey, 0.2);
   }
 
   .is-active {
@@ -146,36 +197,48 @@
 
 .price__tab {
   position: relative;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 20px;
-  cursor: pointer;
-  color: rgba($color-sapphire, 0.5);
-  border: none;
-  background-color: unset;
+
   padding: 5px 0 14px;
 
-  &::after {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 2px;
-    background-color: $color-crimson;
-    z-index: 2;
-  }
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: rgba($color-sapphire, 0.5);
+
+  background-color: unset;
+  border: none;
+  cursor: pointer;
 
   @include vp-1365 {
     font-size: 18px;
     line-height: 18px;
   }
+  @include vp-767 {
+    width: max-content;
+    max-width: 33%;
+    padding: 5px 0 18px;
 
+    font-size: 16px;
+    line-height: 16px;
+  }
   @include hover-focus {
     color: $color-sapphire;
 
     &::after {
       content: "";
     }
+  }
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+
+    height: 2px;
+
+    background-color: $color-crimson;
   }
 
   &:disabled {

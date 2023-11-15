@@ -1,5 +1,7 @@
 .btn {
   display: flex;
+  justify-content: center;
+  box-sizing: border-box;
   width: fit-content;
   height: fit-content;
   padding: 27px 56px;
@@ -11,7 +13,6 @@
   color: $color-default-white;
   text-transform: uppercase;
   letter-spacing: 0.6px;
-  box-sizing: border-box;
 
   background-color: $color-transparent;
   border: 2px solid $color-default-white;
@@ -22,13 +23,11 @@
   @include vp-1365 {
     padding: 22px 32px;
   }
-
   @include hover-focus {
     color: $color-egyptian-blue;
 
     background-color: $color-default-white;
   }
-
   @include active {
     color: $color-default-black;
   }
@@ -42,11 +41,12 @@
 
 .btn-secondary {
   display: flex;
+  justify-content: center;
+  box-sizing: border-box;
   width: fit-content;
   height: fit-content;
-  padding: 27px 56px;
-  box-sizing: border-box;
   min-height: 56px;
+  padding: 27px 56px;
 
   font-weight: 700;
   font-size: 12px;
@@ -65,14 +65,12 @@
   @include vp-1365 {
     padding: 22px 32px;
   }
-
   @include hover-focus {
     color: $color-default-white;
 
     background: $red-to-blue-to-right;
     border: none;
   }
-
   @include active {
     opacity: 0.7;
   }
