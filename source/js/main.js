@@ -1,8 +1,8 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
-import {initTabs, tabs} from './modules/tabs/init-tabs';
-import {Runner} from './modules/runner/runner';
-import {Form} from './modules/form-validate/form';
+// import {initModals} from './modules/modals/init-modals';
+// import {initTabs, tabs} from './modules/tabs/init-tabs';
+// import {Runner} from './modules/runner/runner';
+// import {Form} from './modules/form-validate/form';
 import {initSliders} from './modules/sliders/jury-slider';
 
 
@@ -18,18 +18,19 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
 
+  initSliders();
+
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    initModals();
-    initTabs();
-    initSliders();
-    tabs.init();
-    const runner = new Runner();
-    runner.init();
-    const form = new Form();
-    window.form = form;
-    form.init();
+    // initModals();
+    // initTabs();
+    // tabs.init();
+    // const runner = new Runner();
+    // runner.init();
+    // const form = new Form();
+    // window.form = form;
+    // form.init();
   });
 });
 

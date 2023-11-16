@@ -1,64 +1,33 @@
-/* eslint-disable no-new */
-// const initJurySlider = () => {
-//   const swiperWrapper = document.querySelector('.slider');
-//   const buttonPrev = document.querySelector('.swiper-button-prev');
-//   const buttonNext = document.querySelector('.swiper-button-next');
-
-//   const swiper = new window.Swiper(swiperWrapper, {
-//     slideClass: 'jury__card',
-//     // loop: true,
-//     // navigation: {
-//     //   nextEl: buttonNext,
-//     //   prevEl: buttonPrev,
-//     // },
-//     breakPoints: {
-//       1366: {
-//         slidesPerView: 4,
-//         spaceBetween: 40,
-//         allowTouchMove: false,
-//       },
-//       768: {
-//         slidesPerView: 2,
-//         spaceBetween: 32,
-//         allowTouchMove: true,
-//       },
-//       0: {
-//         slidesPerView: 1,
-//         spaceBetween: 0,
-//         allowTouchMove: true,
-//       },
-//     },
-//   });
-// };
-
-import Swiper from '../../vendor/swiper';
-
-const swiperWrapper = document.querySelector('.swiper');
+const sliderJury = document.querySelector('[data-swiper="jury"]');
+const sliderButtonPrev = document.querySelector('[data-swiper-button="jury-prev"]');
+const sliderButtonNext = document.querySelector('[data-swiper-button="jury-next"]');
 
 const initSliderJury = () => {
-  new Swiper(swiperWrapper, {
-
-    navigation: {
-      nextEl: '[data-button="next"]',
-      prevEl: '[data-button="prev"]',
-    },
-
+  const swiper = new Swiper(sliderJury, {
+    slideClass: 'jury__card',
     loop: true,
-
-    breakpoints: {
+    navigation: {
+      nextEl: sliderButtonPrev,
+      prevEl: sliderButtonNext,
+    },
+    grabCursor: true,
+    breakPoints: {
       1366: {
         slidesPerView: 4,
         spaceBetween: 40,
+        allowTouchMove: false,
       },
 
       768: {
         slidesPerView: 2,
         spaceBetween: 32,
+        allowTouchMove: true,
       },
 
-      320: {
+      0: {
         slidesPerView: 1,
-        spaceBetween: 20,
+        spaceBetween: 0,
+        allowTouchMove: true,
       },
     },
   });
