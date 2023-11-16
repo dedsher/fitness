@@ -175,8 +175,8 @@
 
           <div class="jury">
             <h2 class="jury__title">Жюри</h2>
-            <div class="jury__wrapper swiper" data-swiper="jury">
-              <div class="swiper-wrapper">
+            <div class="swiper jury__wrapper" data-swiper="jury">
+              <div class="jury__swiper-wrapper swiper-wrapper">
                 <div class="jury__card">
                   <figure>
                     <picture>
@@ -263,8 +263,16 @@
                 </div>
               </div>
 
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
+              <div class="jury__button jury__button--prev" data-swiper-button="jury-prev">
+                <svg viewBox="0 0 16 32">
+                  <use xlink:href="img/sprite.svg#jury-arrow"></use>
+                </svg>
+              </div>
+              <div class="jury__button jury__button--next" data-swiper-button="jury-next">
+                <svg viewBox="0 0 16 32">
+                  <use xlink:href="img/sprite.svg#jury-arrow"></use>
+                </svg>
+              </div>
             </div>
           </div>
         </div>
@@ -496,23 +504,3 @@
     <script src="js/main.min.js"></script>
   </body>
 </html>
-
-<!-- Табы -->
-<!-- <div class="tabs tabs--runner no-transition-global" data-tabs="parent" data-delay="300">
-            <div class="tabs__controls" data-tabs="controls" data-adaptive-runner="track">
-              <button class="tabs__control btn is-active" type="button" data-tabs="control" data-adaptive-runner="checkpoint">checkpoint 1</button>
-              <button class="tabs__control btn" type="button" data-tabs="control" data-adaptive-runner="checkpoint">checkpoint 2</button>
-              <button class="tabs__control btn" type="button" data-tabs="control" data-adaptive-runner="checkpoint">checkpoint 3</button>
-            </div>
-            <div class="tabs__content" data-tabs="content">
-              <div class="tabs__element" data-tabs="element">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.</p>
-              </div>
-              <div class="tabs__element" data-tabs="element">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.</p>
-              </div>
-              <div class="tabs__element" data-tabs="element">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, perspiciatis! Ab pariatur dolor alias debitis molestiae reprehenderit tempora ducimus, atque amet inventore illum ullam laboriosam totam vel error dicta et.</p>
-              </div>
-            </div>
-          </div> -->
