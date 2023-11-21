@@ -80,6 +80,18 @@
   li:nth-child(1n + 4) {
     position: relative;
 
+    &::after {
+      content: "";
+      position: absolute;
+      top: -56px;
+      right: 0;
+      left: 0;
+
+      height: 2px;
+
+      background-color: rgba($color-crimson, 0.2);
+    }
+
     @include vp-1365 {
       margin: 0;
 
@@ -91,18 +103,6 @@
       &::after {
         content: none;
       }
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: -56px;
-      right: 0;
-      left: 0;
-
-      height: 2px;
-
-      background-color: rgba($color-crimson, 0.2);
     }
   }
 

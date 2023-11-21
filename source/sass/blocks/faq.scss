@@ -1,3 +1,243 @@
 .faq {
   background-color: $color-ghost-white;
+  padding: 120px 0;
+
+  @include vp-1365 {
+    padding: 100px 0;
+  }
+  @include vp-767 {
+    padding: 70px 0;
+  }
+}
+
+.faq__title {
+  margin: 0 0 51px 0;
+
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 54px;
+  font-family: $ff-alumni;
+  letter-spacing: 1.62px;
+  color: $color-sapphire;
+
+  @include vp-1365 {
+    font-size: 42px;
+    line-height: 42px;
+    letter-spacing: 1.26px;
+    text-align: center;
+    margin: 0 0 50px 0;
+  }
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 0.96px;
+    margin: 0 0 37px 0;
+  }
+}
+
+.faq__tabs {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+
+  @include vp-1365 {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  @include vp-767 {
+    gap: 30px;
+  }
+}
+
+.faq__controls {
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  justify-content: unset;
+
+  @include vp-1365 {
+    flex-direction: row;
+  }
+  @include vp-767 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.faq__controls .is-active {
+  color: $color-default-white;
+  background: $red-to-blue-to-right;
+}
+
+.faq__control {
+  width: 100%;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: unset;
+  padding: 16px 30px;
+  outline: 1px solid rgba($color-sapphire, 0.2);
+  outline-offset: -1px;
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 16px;
+    padding: 14px 30px;
+  }
+}
+
+.faq__tab {
+  padding: 0;
+}
+
+.faq__accord {
+  padding: 25px 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    height: 1px;
+    background-color: rgba($color-resolution-blue, 0.2);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+
+  &:last-child::after {
+    content: "";
+    height: 1px;
+    background-color: rgba($color-resolution-blue, 0.2);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+    color: $color-sapphire;
+    max-width: 660px;
+
+    @include vp-1365 {
+      max-width: 550px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
+
+.faq__button {
+  text-align: start;
+  border: none;
+  background-color: $color-transparent;
+  font-size: 24px;
+  line-height: 24px;
+  color: $color-sapphire;
+  text-transform: unset;
+  position: relative;
+  position: relative;
+
+  @include vp-1365 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  span {
+    display: block;
+    max-width: 660px;
+
+    @include vp-1365 {
+      max-width: 490px;
+    }
+    @include vp-767 {
+      max-width: 238px;
+    }
+  }
+}
+
+.circle {
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border: 1px solid $color-sapphire;
+  border-radius: 50%;
+
+  @include vp-767 {
+    width: 30px;
+    height: 30px;
+  }
+
+  .vertical {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(-90deg);
+  }
+  .horizontal {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(-90deg);
+    opacity: 1;
+  }
+}
+
+.faq__accord.is-active .circle {
+  opacity: 1;
+  background-color: $color-sapphire;
+  .vertical {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(90deg);
+    background-color: $color-default-white;
+  }
+  .horizontal {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(90deg);
+    background-color: $color-default-white;
+    opacity: 0;
+  }
+}
+
+.circle .horizontal {
+    position: absolute;
+    background-color: $color-sapphire;
+    width: 20px;
+    height: 2px;
+    left: 50%;
+    margin-left: -10px;
+    top: 50%;
+    margin-top: -1px;
+
+    @include vp-767 {
+      width: 14px;
+      margin-left: -7px;
+    }
+}
+.circle .vertical {
+    position: absolute;
+    background-color: $color-sapphire;
+    width: 2px;
+    height: 20px;
+    left: 50%;
+    margin-left: -1px;
+    top: 50%;
+    margin-top: -10px;
+
+    @include vp-767 {
+      height: 14px;
+      margin-top: -7px;
+    }
 }

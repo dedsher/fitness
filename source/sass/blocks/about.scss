@@ -1,5 +1,5 @@
 .about {
-  padding: 120px 0;
+  padding: 120px 0 240px;
 
   color: $color-sapphire;
 
@@ -80,6 +80,7 @@
   display: flex;
   width: fit-content;
   margin: 0 auto;
+  position: relative;
 
   gap: 145px;
   @include vp-1365 {
@@ -93,8 +94,9 @@
   }
   @include vp-767 {
     text-align: left;
-
-    gap: 50px;
+    height: 100%;
+    gap: 0;
+    align-items: unset;
   }
 }
 
@@ -104,11 +106,12 @@
   @include vp-1365 {
     max-width: 502px;
   }
+  @include vp-767 {
+    margin: 0 0 50px 0;
+  }
 }
 
 .about__img-wrapper {
-  position: relative;
-
   max-width: 660px;
 
   @include vp-1365 {
@@ -117,9 +120,12 @@
     height: 345px;
   }
   @include vp-767 {
-    // position: absolute;
-    // width: 100vw;
-    // height: auto;
+    width: 100vw;
+    height: auto;
+    margin: 0 0 40px 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   img {
@@ -134,18 +140,110 @@
 
 .about__video-wrapper {
   position: absolute;
+  left: calc(50% + 39px);
+  transform: translateX(-50%);
   bottom: -115px;
-  left: -63px;
+  width: 364px;
+  height: 228px;
+  cursor: pointer;
 
   @include vp-1365 {
     bottom: -83px;
     left: 50%;
+    width: 265px;
+    height: 167px;
+  }
 
-    transform: translateX(-50%);
+  @include vp-767 {
+    position: relative;
+    width: 100vw;
+    height: 167px;
+    bottom: unset;
+  }
 
-    iframe {
+  iframe {
+    width: 364px;
+    height: 228px;
+    display: block;
+    position: absolute;
+    z-index: -5;
+
+    @include vp-1365 {
       width: 265px;
       height: 167px;
     }
+
+    @include vp-767 {
+      width: 100%;
+    }
+  }
+}
+
+.about__video-poster {
+  position: absolute;
+  width: 364px;
+  height: 228px;
+  left: 0;
+  top: 0;
+
+  &::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-dark-cerulean;
+    opacity: 0.5;
+    content: "";
+  }
+
+  @include vp-1365 {
+    width: 265px;
+    height: 167px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.about__video-button {
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background-image: $red-to-blue-to-right;
+
+  outline: 1px solid rgba($color-torch-red, 0.2);
+  outline-offset: 12px;
+
+  @include vp-1365 {
+    width: 52px;
+    height: 52px;
+
+    outline-offset: 8px;
+  }
+
+  svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 17px;
+    height: 17px;
   }
 }

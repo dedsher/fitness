@@ -107,8 +107,12 @@
       opacity: 0.8;
     }
     @include focus {
-      border: unset;
-      border-radius: unset;
+      border: none;
+      border-radius: none;
+      outline: none;
+    }
+    @include active {
+      opacity: 1;
     }
 
     &::after {

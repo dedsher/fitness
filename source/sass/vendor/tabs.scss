@@ -41,7 +41,6 @@
     text-transform: uppercase;
     cursor: pointer;
     margin: 0 20px;
-    opacity: 0.5;
     min-width: auto;
     justify-content: center;
     width: 25%;
@@ -56,16 +55,9 @@
       padding: 10px;
       width: 45%;
     }
-
-    &.is-active {
-      opacity: 1;
-      pointer-events: none;
-    }
   }
 
   &__content {
-    margin-bottom: 40px;
-
     transition: height 0.3s;
   }
 
@@ -83,22 +75,6 @@
       &:not(:last-child) {
         margin: 0 0 20px 0;
       }
-    }
-
-    &:nth-child(1) {
-      background-color: rgb(250, 235, 215);
-    }
-
-    &:nth-child(2) {
-      background-color: rgb(229, 250, 215);
-    }
-
-    &:nth-child(3) {
-      background-color: rgb(180, 188, 233);
-    }
-
-    &:nth-child(4) {
-      background-color: rgb(255, 187, 204);
     }
   }
 

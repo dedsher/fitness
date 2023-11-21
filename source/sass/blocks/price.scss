@@ -1,5 +1,6 @@
 .price {
   position: relative;
+  z-index: 1;
 
   padding: 120px 0;
 
@@ -26,6 +27,9 @@
     @include vp-1365 {
       grid-template-columns: 1fr;
     }
+    @include vp-767 {
+      width: 100%;
+    }
   }
 
   li {
@@ -34,15 +38,16 @@
     align-items: center;
     min-height: 448px;
     padding: 65px 70px;
+    min-width: 360px;
 
     background-color: $color-default-white;
     border: 7px solid $color-transparent;
 
     @include vp-1365 {
       padding: 65px 118px;
-      // min-width: 440px;
     }
     @include vp-767 {
+      min-width: 100%;
       min-height: unset;
       padding: 50px 42px;
     }
@@ -98,6 +103,8 @@
     font-size: 60px;
     line-height: 90px;
     color: $color-egyptian-blue;
+    position: relative;
+    z-index: 5;
 
     @include vp-1365 {
       margin: 0 0 24px 0;
@@ -111,11 +118,35 @@
   }
 
   span {
+    position: relative;
+    z-index: 1;
+  }
+
+  small {
     font-family: $ff-rouble;
     color: $color-sapphire;
   }
 
+  strong {
+    width: max-content;
+    position: absolute;
+    left: 50%;
+    bottom: 6px;
+    transform: translateX(-50%);
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    color: $color-whisper;
+
+    @include vp-767 {
+      font-size: 80px;
+    }
+  }
+
   a {
+    width: 100%;
+    padding: 27px 42px;
     @include vp-1365 {
       padding: 20px 42px;
     }
@@ -123,13 +154,6 @@
       padding: 22px 35px;
     }
   }
-
-  // &::after {
-  //   content: "";
-  //   width: 321px;
-  //   height: 384px;
-  //   ТУТ ДОЛЖНЫ БЫТЬ БЛИНЫ
-  // }
 }
 
 .price__wrapper {
@@ -171,6 +195,7 @@
   }
   @include vp-767 {
     margin: 0 0 35px 0;
+    gap: 45px;
   }
 
   &::after {
@@ -245,5 +270,17 @@
     opacity: 0.3;
 
     pointer-events: none;
+  }
+}
+
+.price__img-wrapper {
+  position: absolute;
+  right: 0;
+  bottom: -150px;
+  z-index: -1;
+  transform: translate3d(0, 0, 5px);
+
+  @include vp-767 {
+    display: none;
   }
 }

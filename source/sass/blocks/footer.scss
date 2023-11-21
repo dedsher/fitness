@@ -98,8 +98,14 @@
     }
   }
 
+  label {
+    width: 100%;
+    display: block;
+  }
+
   input {
     padding: 10px 0 4px;
+    width: 100%;
 
     font-weight: 400;
     font-size: 14px;
@@ -338,6 +344,22 @@
     line-height: 22px;
     color: $color-default-white;
     display: block;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -2px;
+      height: 1px;
+      background-color: $color-default-white;
+    }
+
+    @include hover {
+      &::after {
+        content: "";
+      }
+    }
   }
 
   svg {
@@ -364,8 +386,18 @@
     width: 25px;
     height: 25px;
     display: block;
+    position: relative;
 
     background-color: $color-default-white;
     border-radius: 50%;
+  }
+
+  svg {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }

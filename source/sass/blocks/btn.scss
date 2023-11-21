@@ -1,27 +1,23 @@
 .btn {
-  display: flex;
-  justify-content: center;
-  box-sizing: border-box;
-  width: fit-content;
-  height: fit-content;
-  padding: 27px 56px;
-
-  font-weight: 700;
+  display: inline-flex;
+  padding: 25px 42px;
+  font-family: $ff-placeholder;
   font-size: 12px;
+  font-weight: 700;
   line-height: 12px;
-  text-align: center;
-  color: $color-default-white;
-  text-transform: uppercase;
   letter-spacing: 0.6px;
-
+  color: $color-default-white;
   background-color: $color-transparent;
   border: 2px solid $color-default-white;
   cursor: pointer;
+  user-select: none;
+  justify-content: center;
+  align-items: center;
 
   transition: all $trans-default;
 
   @include vp-1365 {
-    padding: 22px 32px;
+    padding: 22px 34px;
   }
   @include hover-focus {
     color: $color-egyptian-blue;
@@ -40,27 +36,23 @@
 }
 
 .btn-secondary {
-  display: flex;
-  justify-content: center;
-  box-sizing: border-box;
-  width: fit-content;
-  height: fit-content;
-  min-height: 56px;
-  padding: 27px 56px;
-
-  font-weight: 700;
+  display: inline-flex;
+  padding: 23px 40px;
+  font-family: $ff-placeholder;
   font-size: 12px;
+  font-weight: 700;
   line-height: 12px;
-  text-align: center;
-  color: $color-sapphire;
-  text-transform: uppercase;
   letter-spacing: 0.6px;
-
-  background-color: $color-default-white;
-  border: 2px solid $color-sapphire;
+  color: $color-sapphire;
+  background-color: $color-transparent;
+  border: 0;
+  outline: 2px solid $color-sapphire;
+  outline-offset: -2px;
   cursor: pointer;
-
-  transition: background-color $trans-default;
+  user-select: none;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
 
   @include vp-1365 {
     padding: 22px 32px;
@@ -69,7 +61,7 @@
     color: $color-default-white;
 
     background: $red-to-blue-to-right;
-    border: none;
+    outline: 0;
   }
   @include active {
     opacity: 0.7;
@@ -79,5 +71,135 @@
     opacity: 0.3;
 
     pointer-events: none;
+  }
+}
+
+.btn-buy {
+  display: inline-flex;
+  padding: 25px 42px;
+  font-family: $ff-placeholder;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 0.6px;
+  color: $color-sapphire;
+  background-color: $color-transparent;
+  border: 2px solid $color-sapphire;
+  cursor: pointer;
+  user-select: none;
+
+  @include vp-1365 {
+    padding: 21px 42px 19px;
+  }
+
+  @include vp-767 {
+    padding: 21px 42px 19px;
+  }
+
+  &:hover:not(.focus-visible):not(.btn-buy--disabled) {
+    border: none;
+    background: $red-to-blue-to-right;
+    color: $color-default-white;
+    padding: 27px 44px;
+    outline: none;
+
+    @include vp-1365 {
+      padding: 23px 44px 21px;
+    }
+  }
+
+  &:focus-visible:not(.btn-buy--disabled) {
+    border: none;
+    background: $red-to-blue-to-right;
+    color: $color-default-white;
+    padding: 27px 44px;
+    outline: none;
+
+    @include vp-1365 {
+      padding: 23px 44px 21px;
+    }
+  }
+
+  &:active:not(.btn-buy--disabled) {
+    border: none;
+    background: $red-to-blue-to-right;
+    color: rgba($color-default-white, 0.7);
+    padding: 27px 44px;
+    outline: none;
+
+    @include vp-1365 {
+      padding: 23px 44px 21px;
+    }
+  }
+}
+
+.btn-buy--disabled {
+  color: $color-sapphire;
+  background-color: $color-transparent;
+  border: 2px solid $color-sapphire;
+  background: none;
+  opacity: 0.3;
+
+  &:hover:not(.focus-visible) {
+    color: $color-sapphire;
+    background-color: $color-transparent;
+    border: 2px solid $color-sapphire;
+    background: none;
+    opacity: 0.3;
+  }
+}
+
+.btn-swiper {
+  height: 56px;
+  width: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: $color-transparent;
+  left: -72px;
+  margin: 0;
+  padding: 0;
+
+  &--next {
+    left: unset;
+    right: -72px;
+
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &::after {
+    content: none;
+  }
+
+  @include vp-767 {
+    left: -52px;
+
+    &--next {
+      left: unset;
+      right: -52px;
+    }
+  }
+
+  @include hover-focus {
+    border: 1px solid $color-sapphire;
+  }
+  @include active {
+    background-color: $color-sapphire;
+    svg {
+      color: $color-default-white;
+    }
+  }
+
+  svg {
+    width: 16px;
+    height: 32px;
+    color: $color-sapphire;
   }
 }

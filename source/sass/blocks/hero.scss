@@ -141,6 +141,10 @@
   margin-left: auto;
 
   grid-column: 2;
+  @include vp-1365 {
+    min-width: 185px;
+    width: 100%;
+  }
   @include vp-767 {
     width: 100%;
     margin: 0 auto;

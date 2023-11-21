@@ -30,6 +30,23 @@
   }
 }
 
+.reviews__buttons-wrapper {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.reviews__slider-wrapper {
+  width: 560px;
+
+  @include vp-1365 {
+    width: 580px;
+  }
+  @include vp-767 {
+    width: 226px;
+  }
+}
+
 .reviews__card {
   display: flex;
   width: 560px;
